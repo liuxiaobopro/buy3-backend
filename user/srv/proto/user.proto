@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option go_package = '.;proto';
+
+service User{
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse); // 创建用户
+    rpc GetUser(GetUserRequest) returns (GetUserResponse); // 获取用户
+    rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse); // 更新用户
+}
+
+message CreateUserRequest{
+    string phone = 1;
+    string password = 2;
+}
+
+message CreateUserResponse{
+    int32 id = 1;
+}
+
+message GetUserRequest{
+    int32 id = 1;
+}
+
+message GetUserResponse{
+    int32 id = 1;
+    string phone = 2;
+    string password = 3;
+}
+
+message UpdateUserRequest{
+    int32 id = 1;
+    string phone = 2;
+    string password = 3;
+}
+
+message UpdateUserResponse{
+    int32 id = 1;
+}
