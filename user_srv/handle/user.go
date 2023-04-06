@@ -1,10 +1,10 @@
-package api
+package handle
 
 import (
 	"context"
 	"fmt"
 
-	"buy3/user/srv/proto"
+	"user_srv/proto"
 )
 
 type UserHandle struct {
