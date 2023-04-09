@@ -21,6 +21,6 @@ type SrvConfig struct {
 type Conf struct {
 	Name       string       `mapstructure:"name" json:"name"`
 	MysqlInfo  MysqlConfig  `mapstructure:"mysql" json:"mysql"`
-	Srv        SrvConfig    `mapstructure:"user-srv" json:"user_srv"`
+	Srv        SrvConfig    `mapstructure:"user_srv" json:"user_srv"`
 	ConsulInfo ConsulConfig `mapstructure:"consul" json:"consul"`
 }
